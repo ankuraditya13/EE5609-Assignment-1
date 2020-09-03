@@ -29,20 +29,7 @@
 Matrix Theory Assignment 1
 }
 
-%\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
-%         \thanks{*Use the $\backslash$thanks command to put information here}\\
-%         Faculty of Electrical Engineering, Mathematics and Computer Science\\
-%         University of Twente\\
-%         7500 AE Enschede, The Netherlands\\
-%         {\tt\small h.kwakernaak@autsubmit.com}}
-%         \hspace*{ 0.5 in}
-%         \parbox{3 in}{ \centering Pradeep Misra**
-%         \thanks{**The footnote marks may be inserted manually}\\
-%        Department of Electrical Engineering \\
-%         Wright State University\\
-%         Dayton, OH 45435, USA\\
-%         {\tt\small pmisra@cs.wright.edu}}
-%}
+
 
 \author{Ankur Aditya - EE20RESCH11010}
 
@@ -91,75 +78,69 @@ Find the image of the point \left( \begin{array}{c} 3\\ 8\\\end{array}\right) wi
 \section{Solution}
 
 
-For this problem, I am considering the general case. Let the Equation of line be a*x + b*y = c and let the coordinates of, \\
-P(given-point) be \left( \begin{array}{c} x1\\ y1\\\end{array}\right) \\ \\
-Q(image-point) be \left( \begin{array}{c} x2\\ y2\\\end{array}\right) \\ \\
-R(point-on-mirror) be \left( \begin{array}{c} x3\\ y3\\\end{array}\right) \\
+For this problem, I am considering the general case. Let the Equation of line be ax + by = c and let the coordinates of, \\
+\vec{P}(given-point) be \left( \begin{array}{c} x1\\ y1\\\end{array}\right) \\ \\
+\vec{Q}(image-point) be \left( \begin{array}{c} x2\\ y2\\\end{array}\right) \\ \\
+\vec{R}(point-on-mirror) be \left( \begin{array}{c} x3\\ y3\\\end{array}\right) \\
 \\
 
-Let vector n = \left( \begin{array}{c} a\\ b\\\end{array}\right)
+Let vector \vec{n} = \left( \begin{array}{c} a\\ b\\\end{array}\right)
 \\ \\
-\textbf{Let m be the directional vector along line a*x + b*y = c.}\\ \textbf{ Hence, m = (b -a) } \\ 
+\textbf{Let m be the directional vector along line ax + by = c.}\\ \textbf{ Hence, m = (b -a) } \\ 
 
 Let m1 and m2 be the slopes of two prependicular lines,\\ \\
 Now, m1 = \(\frac{y2 - y1}{x2 - x1}\) and m2 = \(\frac{-a}{b}\)\\     \\ 
-Now for perpendicular lines m1 * m2 = -1, which in vector can be written as:\\
+Now for perpendicular lines m1 m2 = -1, which in vector can be written as:\\
 \begin{equation}
-   m^T * R = m^T * P;  
+   \vec{m}^T\vec{R} = \vec{m}^T\vec{P};  
 \end{equation}
 
-Similarly in vector form line equation a*x + b*y + c = 0 is given as,
+Similarly in vector form line eqauation ax + by + c = 0 is given as,
 \begin{equation}
-    n^T * Q = c;
+   \vec{n}^T\vec{Q} =c;
 \end{equation}
 
+\begin{figure}[!ht]
+\includegraphics[scale=0.5]{Figure_1.png}\\
+\caption{Image of a point in 2D line}
+\label{fig:foo}
+\end{figure}
 
-\includegraphics[scale=0.25]{fig1.png} \\
 
 
 By property in Figure 1, the line PR bisects the mirror equation perpendicularly. Hence, 
 \begin{equation}
-    2*Q = P + R
+    2\vec{Q} = \vec{P} + \vec{R}
 \end{equation}
 
 Hence, From the equation (3) and (4)
 \begin{equation}
-    n^T * R = 2*c - n^T * P
+    \vec{n}^T\vec{R} = 2c - \vec{n}^T\vec{P}
 \end{equation}
 Now, form equation (5) and (2) we get,
 
 \begin{equation}
-    (m\hspace{0.5cm}n) ^T * R = (m\hspace{0.35cm}-n) ^T * P + (0\hspace{0.35cm}2*c) ^T
+    (\vec{m}\hspace{0.5cm}\vec{n}) ^T  \vec{R} = (\vec{m}\hspace{0.35cm}-\vec{n}) ^T  \vec{P} + (0\hspace{0.35cm}2c) ^T
 \end{equation}
 Hence upon solving the equation for point R using the property,
-(m\hspace{0.35cm}-n) = (m\hspace{0.5cm}n) * \left( \begin{array}{c} 1\hspace{0.25cm}0\\  0\hspace{0.1cm}-1\\\end{array}\right) \textbf{we get,} \\ 
+(\vec{m}\hspace{0.35cm}-\vec{n}) = (\vec{m}\hspace{0.5cm}\vec{n})  \left( \begin{array}{c} 1\hspace{0.25cm}0\\  0\hspace{0.1cm}-1\\\end{array}\right) \textbf{we get,} \\ 
 
 \\
 \begin{equation}
-    \(\frac{R}{2}\) = \(\frac{m * m^T - n*n^T}{m^T * m + n^T * n}\) *P + c * \(\frac{n}{||n||^2}\)
+    \(\frac{\vec{R}}{2}\) = \(\frac{\vec{m}\vec{m}^T - \vec{n}*\vec{n}^T}{\vec{m}^T\vec{m} + \vec{n}^T * \vec{n}}\)\vec{P} + c  \(\frac{\vec{n}}{||\vec{n}||^2}\)
 \end{equation}
 
 
      
  Hence, substituting the value of x1 = 3, y1 = 8, a = 1, b = 3 and c = 7 we get,\\ \\
- P(given-point)  = \left( \begin{array}{c} 3\\ 8\\\end{array}\right) \\ \\
- m(direction-vector) = \left( \begin{array}{c} 3\\ -1\\\end{array}\right) \\ \\
- n = \left( \begin{array}{c} 1\\ 3\\\end{array}\right) \\ \\
- Norm, ||n|| = (a^2+b^2)^(0.5) \\  \\
+ \vec{P}(given-point)  = \left( \begin{array}{c} 3\\ 8\\\end{array}\right) \\ \\
+ \vec{m}(direction-vector) = \left( \begin{array}{c} 3\\ -1\\\end{array}\right) \\ \\
+\vec{n} = \left( \begin{array}{c} 1\\ 3\\\end{array}\right) \\ \\
+ Norm, ||\vec{n}|| = (a^2+b^2)^(0.5) \\  \\
  
 \textbf{ Substituting these values in equation (7) we get,\\ \\
- R = \left( \begin{array}{c} -1\\ -4\\\end{array}\right) \\ \\
- \textbf{Hence, it is the required answer for image of P in line \\(1 3) x =7.} }
- 
-
-
-
-
-
-
-
-
-
+ \vec{R} = \left( \begin{array}{c} -1\\ -4\\\end{array}\right) \\ \\
+ \textbf{Hence, it is the required answer for image of \vec{P} in-line \\(1\;\;3) x =7.} }
 
 
 \end{document}
