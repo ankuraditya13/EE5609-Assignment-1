@@ -1,37 +1,162 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%2345678901234567890123456789012345678901234567890123456789012345678901234567890
-%        1         2         3         4         5         6         7         8
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{amsmath}
 
-\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out
-                                                          % if you need a4paper
-%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
-                                                          % paper
+%
+\usepackage{setspace}
+\usepackage{gensymb}
+%\doublespacing
+\singlespacing
 
-\IEEEoverridecommandlockouts                              % This command is only
-                                                          % needed if you want to
-                                                          % use the \thanks command
-\overrideIEEEmargins
-% See the \addtolength command later in the file to balance the column lengths
-% on the last page of the document
+\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+%\usepackage{iithtlc}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+%\usepackage{stmaryrd}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+%\usepackage{enumerate}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{graphicx} %to insert images
-% The following packages can be found on http:\\www.ctan.org
-%\usepackage{graphics} % for pdf, bitmapped graphics files
-%\usepackage{epsfig} % for postscript graphics files
-%\usepackage{mathptmx} % assumes new font selection scheme installed
-%\usepackage{mathptmx} % assumes new font selection scheme installed
-%\usepackage{amsmath} % assumes amsmath package installed
-%\usepackage{amssymb}  % assumes amsmath package installed
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
 
-\title{\LARGE \bf
-Matrix Theory Assignment 1
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
 }
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+
+\begin{document}
+%
 
 
-
-\author{Ankur Aditya - EE20RESCH11010}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{$\left\vert#1\right\vert$}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{$\left\lVert#1\right\rVert$}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E$\left[ #1 \right$]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+    %\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+%\numberwithin{equation}{section}
+\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+\renewcommand{\thefigure}{\theproblem}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+%\counterwithin{equation}{enumi}
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Matrix Theory Assignment 1}
+\author{Ankur Aditya: EE20RESCH11010}
 
 
 
@@ -69,78 +194,136 @@ https://github.com/ankuraditya13/EE5609-Assignment-1
 \section{Problem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Find the image of the point \left( \begin{array}{c} 3\\ 8\\\end{array}\right) with respect to the line 
+\textbf{Find the image of the point} \begin{pmatrix}
+    3\\
+    8
+    \end{pmatrix} \textbf{with respect to the line} 
 
    \begin{equation}
-         (1\;\;3)\textbf{x} = 7 
+         \begin{pmatrix}
+    1 & 3
+    \end{pmatrix} \vec{x} = 7 
 \end{equation}       
 
 \section{Solution}
 
 
 For this problem, I am considering the general case. Let the Equation of line be ax + by = c and let the coordinates of, \\
-\vec{P}(given-point) be \left( \begin{array}{c} x1\\ y1\\\end{array}\right) \\ \\
-\vec{Q}(image-point) be \left( \begin{array}{c} x2\\ y2\\\end{array}\right) \\ \\
-\vec{R}(point-on-mirror) be \left( \begin{array}{c} x3\\ y3\\\end{array}\right) \\
+\textbf{P}(given point) = \begin{pmatrix}
+    x1\\
+    y1
+    \end{pmatrix} \\
+    
+\textbf{Q}(image point) = \begin{pmatrix}
+    x2\\
+    y2
+    \end{pmatrix} \\ 
+    
+\textbf{R}(point on mirror) = \begin{pmatrix}
+    x3\\
+    y3
+    \end{pmatrix}
 \\
 
-Let vector \vec{n} = \left( \begin{array}{c} a\\ b\\\end{array}\right)
+Let vector \textbf{n} = \begin{pmatrix}
+    a\\
+    b
+    \end{pmatrix}
 \\ \\
-\textbf{Let m be the directional vector along line ax + by = c.}\\ \textbf{ Hence, m = (b -a) } \\ 
+\textbf{Let m be the directional vector along the line} \\ \textbf{ax + by = c} hence, m = \begin{pmatrix}
+    b & -a
+    \end{pmatrix} \\ 
 
 Let m1 and m2 be the slopes of two prependicular lines,\\ \\
 Now, m1 = \(\frac{y2 - y1}{x2 - x1}\) and m2 = \(\frac{-a}{b}\)\\     \\ 
-Now for perpendicular lines m1 m2 = -1, which in vector can be written as:\\
+Now for perpendicular lines m1m2 = -1, which in vector can be written as:\\
 \begin{equation}
-   \vec{m}^T\vec{R} = \vec{m}^T\vec{P};  
+   \vec{m}^T\vec{R} = \vec{m}^T\vec{P}  
 \end{equation}
 
 Similarly in vector form line eqauation ax + by + c = 0 is given as,
 \begin{equation}
-   \vec{n}^T\vec{Q} =c;
+   \vec{n}^T\vec{Q} =c
 \end{equation}
 
 \begin{figure}[!ht]
+\centering
 \includegraphics[scale=0.5]{Figure_1.png}\\
 \caption{Image of a point in 2D line}
-\label{fig:foo}
+\label{fig1}
 \end{figure}
 
 
 
-By property in Figure 1, the line PR bisects the mirror equation perpendicularly. Hence, 
+By property in Figure 0, the line PR bisects the mirror equation perpendicularly. Hence, 
 \begin{equation}
     2\vec{Q} = \vec{P} + \vec{R}
 \end{equation}
 
-Hence, From the equation (3) and (4)
+Hence, From the equation (2.0.3) and (2.0.4)
 \begin{equation}
     \vec{n}^T\vec{R} = 2c - \vec{n}^T\vec{P}
 \end{equation}
-Now, form equation (5) and (2) we get,
+
+Now, form equation (2.0.5) and (2.0.2) we get,
 
 \begin{equation}
-    (\vec{m}\hspace{0.5cm}\vec{n}) ^T  \vec{R} = (\vec{m}\hspace{0.35cm}-\vec{n}) ^T  \vec{P} + (0\hspace{0.35cm}2c) ^T
+    \begin{pmatrix}
+    \vec{m} & \vec{n}
+    \end{pmatrix} ^T  \vec{R} = \begin{pmatrix}
+    \vec{m} & -\vec{n}
+    \end{pmatrix} ^T  \vec{P} + \begin{pmatrix}
+    0 \\
+    2c
+    \end{pmatrix} 
 \end{equation}
 Hence upon solving the equation for point R using the property,
-(\vec{m}\hspace{0.35cm}-\vec{n}) = (\vec{m}\hspace{0.5cm}\vec{n})  \left( \begin{array}{c} 1\hspace{0.25cm}0\\  0\hspace{0.1cm}-1\\\end{array}\right) \textbf{we get,} \\ 
+\begin{pmatrix}
+    \vec{m} & -\vec{n}
+    \end{pmatrix} = \begin{pmatrix}
+    \vec{m} & \vec{n}
+    \end{pmatrix}  \begin{pmatrix}
+    1 & 0\\
+    0 & -1 
+    \end{pmatrix} \textbf{we get,} \\ 
 
 \\
+
 \begin{equation}
-    \(\frac{\vec{R}}{2}\) = \(\frac{\vec{m}\vec{m}^T - \vec{n}*\vec{n}^T}{\vec{m}^T\vec{m} + \vec{n}^T * \vec{n}}\)\vec{P} + c  \(\frac{\vec{n}}{||\vec{n}||^2}\)
+    \(\frac{\vec{R}}{2}\) = \(\frac{\vec{m}\vec{m}^T - \vec{n}\vec{n}^T}{\vec{m}^T\vec{m} + \vec{n}^T  \vec{n}}\)\vec{P} + c  \(\frac{\vec{n}}{||\vec{n}||^2}\)
 \end{equation}
 
 
      
- Hence, substituting the value of x1 = 3, y1 = 8, a = 1, b = 3 and c = 7 we get,\\ \\
- \vec{P}(given-point)  = \left( \begin{array}{c} 3\\ 8\\\end{array}\right) \\ \\
- \vec{m}(direction-vector) = \left( \begin{array}{c} 3\\ -1\\\end{array}\right) \\ \\
-\vec{n} = \left( \begin{array}{c} 1\\ 3\\\end{array}\right) \\ \\
- Norm, ||\vec{n}|| = (a^2+b^2)^(0.5) \\  \\
+ Hence, substituting the value of x1 = 3, y1 = 8, a = 1, b = 3 and c = 7 we get,\\ 
+ \textbf{P}(given point)  = \begin{pmatrix}
+    3 \\ 
+    8
+    \end{pmatrix} \\ 
+ \textbf{m} (direction vector) = \begin{pmatrix}
+    3 \\
+     -1
+    \end{pmatrix} \\ \\
+\textbf{n} = \begin{pmatrix}
+   1\\
+   3
+    \end{pmatrix} \\ \\
+ Norm, \||\vec{n}\|| = $\sqrt[2]{a^2+b^2}$ \\
  
-\textbf{ Substituting these values in equation (7) we get,\\ \\
- \vec{R} = \left( \begin{array}{c} -1\\ -4\\\end{array}\right) \\ \\
- \textbf{Hence, it is the required answer for image of \vec{P} in-line \\(1\;\;3) x =7.} }
+Substituting these values in equation (2.0.6) we get,\\ 
+\begin{equation}
+\textbf{R} = \begin{pmatrix}
+    -1 \\
+    -4
+    \end{pmatrix} \\ \\
+\end{equation}
+ 
+ Hence, it is the required answer for image of \textbf{P} in line \begin{pmatrix}
+    1 & 3
+    \end{pmatrix} \textbf{x} =7. 
+ 
+ 
 
+ 
 
 \end{document}
