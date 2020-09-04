@@ -214,12 +214,12 @@ For this problem, I am considering the general case. Let the Equation of line be
     y1
     \end{pmatrix} \\
     
-\textbf{Q}(image point) = \begin{pmatrix}
+\textbf{Q}(point on mirror) = \begin{pmatrix}
     x2\\
     y2
     \end{pmatrix} \\ 
     
-\textbf{R}(point on mirror) = \begin{pmatrix}
+\textbf{R}(image point) = \begin{pmatrix}
     x3\\
     y3
     \end{pmatrix}
@@ -230,21 +230,11 @@ Let vector \textbf{n} = \begin{pmatrix}
     b
     \end{pmatrix}
 \\ \\
-\textbf{Let m be the directional vector along the line} \\ \textbf{ax + by = c} hence, m = \begin{pmatrix}
-    b & -a
+Let m be the directional vector along the line, ax + by = c.\\
+Hence, m = \begin{pmatrix}
+    b \\
+    -a
     \end{pmatrix} \\ 
-
-Let m1 and m2 be the slopes of two prependicular lines,\\ \\
-Now, m1 = \(\frac{y2 - y1}{x2 - x1}\) and m2 = \(\frac{-a}{b}\)\\     \\ 
-Now for perpendicular lines m1m2 = -1, which in vector can be written as:\\
-\begin{equation}
-   \vec{m}^T\vec{R} = \vec{m}^T\vec{P}  
-\end{equation}
-
-Similarly in vector form line eqauation ax + by + c = 0 is given as,
-\begin{equation}
-   \vec{n}^T\vec{Q} =c
-\end{equation}
 
 \begin{figure}[!ht]
 \centering
@@ -260,42 +250,17 @@ By property in Figure 0, the line PR bisects the mirror equation perpendicularly
     2\vec{Q} = \vec{P} + \vec{R}
 \end{equation}
 
-Hence, From the equation (2.0.3) and (2.0.4)
-\begin{equation}
-    \vec{n}^T\vec{R} = 2c - \vec{n}^T\vec{P}
-\end{equation}
 
-Now, form equation (2.0.5) and (2.0.2) we get,
-
-\begin{equation}
-    \begin{pmatrix}
-    \vec{m} & \vec{n}
-    \end{pmatrix} ^T  \vec{R} = \begin{pmatrix}
-    \vec{m} & -\vec{n}
-    \end{pmatrix} ^T  \vec{P} + \begin{pmatrix}
-    0 \\
-    2c
-    \end{pmatrix} 
-\end{equation}
-Hence upon solving the equation for point R using the property,
-\begin{pmatrix}
-    \vec{m} & -\vec{n}
-    \end{pmatrix} = \begin{pmatrix}
-    \vec{m} & \vec{n}
-    \end{pmatrix}  \begin{pmatrix}
-    1 & 0\\
-    0 & -1 
-    \end{pmatrix} \textbf{we get,} \\ 
 
 \\
-
+Hence the reflection vector \textbf{R} is given as, 
 \begin{equation}
     \(\frac{\vec{R}}{2}\) = \(\frac{\vec{m}\vec{m}^T - \vec{n}\vec{n}^T}{\vec{m}^T\vec{m} + \vec{n}^T  \vec{n}}\)\vec{P} + c  \(\frac{\vec{n}}{||\vec{n}||^2}\)
 \end{equation}
 
 
      
- Hence, substituting the value of x1 = 3, y1 = 8, a = 1, b = 3 and c = 7 we get,\\ 
+ Hence, substituting the values of x1 = 3, y1 = 8, a = 1, b = 3 and c = 7 we get,\\ 
  \textbf{P}(given point)  = \begin{pmatrix}
     3 \\ 
     8
@@ -310,7 +275,7 @@ Hence upon solving the equation for point R using the property,
     \end{pmatrix} \\ \\
  Norm, \||\vec{n}\|| = $\sqrt[2]{a^2+b^2}$ \\
  
-Substituting these values in equation (2.0.6) we get,\\ 
+Substituting these values in equation (2.0.2) we get,\\ 
 \begin{equation}
 \textbf{R} = \begin{pmatrix}
     -1 \\
