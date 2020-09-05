@@ -176,7 +176,7 @@ This document contains the procedure to get image of a point in a line.
 
 \end{abstract}
 \\
-Download the python code from the below link. Go through the README file in the reposotory.
+Download the python code from the below link. Go through the README file in the repository.
 %
 \begin{lstlisting}
 https://github.com/ankuraditya13/EE5609-Assignment-1
@@ -194,45 +194,38 @@ https://github.com/ankuraditya13/EE5609-Assignment-1
 \section{Problem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{Find the image of the point} \begin{pmatrix}
-    3\\
-    8
-    \end{pmatrix} \textbf{with respect to the line} 
+\textbf{Find the image of the point} \myvec{3\\8} \textbf{with respect to the line} 
 
    \begin{equation}
          \begin{pmatrix}
     1 & 3
-    \end{pmatrix} \vec{x} = 7 
+    \end{pmatrix} \vec{x} = 7.
 \end{equation}       
 
 \section{Solution}
 
 
- \\
-Let, \textbf{P}(given point) = \begin{pmatrix}
-    3\\
-    8
-    \end{pmatrix} \\
-    
-\
-    
-Let, \textbf{R} be the image point. 
-\\
+ 
+Let, given vector $\vec{P} = \myvec{3 \\ 8}\\ $
 
-Let vector \textbf{n} = \begin{pmatrix}
-    1\\
-    3
-    \end{pmatrix}
-\\ \\
-Let m be the directional vector along the line, x + 3y = 7.\\
-Hence, m = \begin{pmatrix}
-    3 \\
-    -1
-    \end{pmatrix} \\ 
+    
+Let, image point be $\vec{R} $.
+
+
+Let vector,$ \vec{n}  = \myvec{1 \\ 3}$
+\\ 
+Let m be the directional vector along the line,  
+$\begin{pmatrix}
+    1 & 3
+    \end{pmatrix} 
+    \vec{x} = 7$.\\
+    
+Hence, $\vec{m} = \myvec{3 \\ -1} $ \\
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[scale=0.5]{Figure_1.png}\\
+%\includegraphics[scale=0.5]{Figure_1.png}\\
+\includegraphics[width=\columnwidth]{Figure_1.png}\\
 \caption{Image of a point in 2D line}
 \label{fig1}
 \end{figure}
@@ -243,32 +236,36 @@ By property in Figure 0, the line PR bisects the mirror equation perpendicularly
 \begin{equation}
     2\vec{Q} = \vec{P} + \vec{R}
 \end{equation}
-Where, \textbf{Q} is the point on the line x + 3y = 7. 
+Where, $\vec{Q}$ is the point on the line,  $\begin{pmatrix}
+    1 & 3
+    \end{pmatrix} \vec{x} = 7.$
 
 
 
 \\
-Hence the reflection vector \textbf{R} is given as, 
+Hence the reflection vector $\vec{R}$ is given as, 
 \begin{equation}
     \(\frac{\vec{R}}{2}\) = \(\frac{\vec{m}\vec{m}^T - \vec{n}\vec{n}^T}{\vec{m}^T\vec{m} + \vec{n}^T  \vec{n}}\)\vec{P} + c  \(\frac{\vec{n}}{||\vec{n}||^2}\)
 \end{equation}
 
 
-     
 
- Norm, \||\vec{n}\|| = $\sqrt[2]{1^2+3^2}$ = $\sqrt[2]{10}$ \\
+\begin{align}
+   
+    \norm{\vec{n}} = \sqrt{1^2+3^2} = \sqrt{10}
+\end{align}
+
+  
+ 
  
 Substituting these values in equation (2.0.2) we get,\\ 
 \begin{equation}
-\textbf{R} = \begin{pmatrix}
-    -1 \\
-    -4
-    \end{pmatrix} \\ \\
+\vec{R} = \myvec{-1 \\ -4} 
 \end{equation}
  
- Hence, it is the required answer for image of \textbf{P} in line \begin{pmatrix}
+ Hence, it is the required answer for image of $\vec{P}$ in line \begin{pmatrix}
     1 & 3
-    \end{pmatrix} \textbf{x} =7. 
+    \end{pmatrix} $\vec{x}$ =7. 
  
  
 
